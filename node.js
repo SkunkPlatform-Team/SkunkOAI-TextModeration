@@ -1,6 +1,7 @@
+const { post } = require("axios");
+
 async function moderateMessage(message){
-  return fetch('https://sp-api.netlify.app/.netlify/functions/moderate-message', {
-    method: 'POST',
+  return post('https://sp-api.netlify.app/.netlify/functions/moderate-message', {
     headers: {
       'Content-Type': 'application/json',
     },
