@@ -23,3 +23,15 @@ fetch('https://sp-api.netlify.app/.netlify/functions/moderate-message', {
     console.error('Error:', err);
   });
 ```
+
+### Result JSON:
+
+```json
+{code:200,success:true,violation_type:"safe"}
+```
+
+When say bad words:
+
+```json
+{code:200,success:true,violation_type:"vulgar"}
+```
