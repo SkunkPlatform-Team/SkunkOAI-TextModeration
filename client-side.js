@@ -1,6 +1,6 @@
 // SkunkOAI API: Text-Moderation for Client Side
 
-window.moderateMessage = function(message) {
+window.moderateMessage = async function(message) {
   return fetch('https://sp-api.netlify.app/.netlify/functions/moderate-message', {
     method: 'POST',
     headers: {
