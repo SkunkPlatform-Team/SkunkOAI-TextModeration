@@ -1,19 +1,16 @@
-const { post } = require("axios");
+const { post } = require('axios');
 
-async function moderateMessage(message){
-  return post('https://sp-api.netlify.app/.netlify/functions/moderate-message', {
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      prompt_moderation: message
-    }),
-  })
-  .then(res => res.json())
+async function moderateMessage(message) {
+  return post(
+    'https://sp-api.netlify.app/.netlify/functions/moderate-message',
+    { prompt_moderation: message }, // cuerpo (body) como objeto
+    { headers: { 'Content-Type': 'application/json' } } // config (headers)
+  )
+  .then(res => res.data)
   .catch(err => {
-    console.error('Error:', err);
+    console.error('Error:', err.message);
     return { error: true, message: err.message };
   });
 }
 
-module.exports = moderateMessage
+module.exports = { moderateMessage };
