@@ -1,4 +1,4 @@
-async function moderateMessage(message){
+export async function moderateMessage(message){
   return fetch('https://sp-api.netlify.app/.netlify/functions/moderate-message', {
     method: 'POST',
     headers: {
@@ -14,5 +14,3 @@ async function moderateMessage(message){
     return { error: true, message: err.message };
   });
 }
-
-export moderateMessage
