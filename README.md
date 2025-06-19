@@ -67,7 +67,7 @@ Possible violation_type Values
 
 "vulgar" – Contains offensive or explicit language.
 
-"inappropriate" – Includes inappropriate or suggestive content.
+"sexual_content" – Includes Sexual Content.
 
 "bullying" – Contains language intended to harass, intimidate, or target someone.
 
